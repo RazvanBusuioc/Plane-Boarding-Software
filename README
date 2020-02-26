@@ -1,0 +1,24 @@
+    Programul citeste din fisierul de intrare fiecare persoana pe rand, impreuna 
+cu datele acesteia(grup, varsta, etc.) si le introduce intr-un ArrayList de 
+persoane/pasageri. 
+    Se creeaza un vector auxiliar care contine toate grupurile existente. 
+Acesta este creat prin parcurgerea vectorului de persoane si  inserarea in 
+vector a grupurilor noi din care fac parte persoanele respective, plus inserarea
+persoanelor in grupul aferent.
+    Se citesc comenzile din fisier(list, embark, insert) si se apeleaza
+functiile aferente din clasa "Heap".
+    
+    Clasa Heap contine un vector prin care este implementat PriorityQueue.
+Vectorul incepe indexarea de la 1 pana la "n". Copii unui nod au indexul 
+'(idxCurent * 2) + 1' respectiv '(idxCurent * 2) + 2', iar parintele unui nod 
+are indexul '(idxCurent + idxCurent%2) / 2) - 1'.
+    Clasa auxArray contine un vector cu toate grupurile din program, acesta
+ajuta la constructia heap-ului.
+    Clasa Bilet contine caracteristicile unui bilet si punctajul aferent 
+acestora.
+    Clasa Persoana(Pasagerul) contine un obiect de timp Bilet, si 
+caracteristicile unui pasager(varsta, nume, punctaj de prioritate, etc).
+    Clasa grup extinde clasa Persoana si contine un vector de persoane si 
+punctajul aferent grupului(punctajul fiecarei persoane + punctaj de grup)
+    Clasa Tema1 este clasa main din care se face citirea din fisier, creearea
+ heapului (PriorityQ) si apelarea functiilor list, embark si insert.
